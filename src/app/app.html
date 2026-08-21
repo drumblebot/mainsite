@@ -1,0 +1,34 @@
+<app-navbar 
+  (toggleTerminal)="toggleTerminal()">
+</app-navbar>
+
+<main class="main-content">
+  <app-hero 
+    [profile]="profile()" 
+    (openTerminal)="openTerminal()">
+  </app-hero>
+
+  <app-skills 
+    [skills]="profile().skills">
+  </app-skills>
+
+  <app-projects 
+    [projects]="profile().projects">
+  </app-projects>
+
+  <app-gaming 
+    [hobbies]="profile().hobbies">
+  </app-gaming>
+
+  <app-contact 
+    [profile]="profile()">
+  </app-contact>
+</main>
+
+<app-footer></app-footer>
+
+<app-terminal 
+  [isOpen]="isTerminalOpen()" 
+  [profile]="profile()" 
+  (close)="closeTerminal()">
+</app-terminal>
